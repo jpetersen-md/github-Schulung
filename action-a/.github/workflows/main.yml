@@ -10,5 +10,5 @@ jobs:
    -uses: actions/checkout@v1 # das sind Repos die versch. Funktionen ausführen/ versch.tools haben, die wir einsetzen können; wie ein docker image; 
    -uses: ./action-a # ordner mit der Action, die das image baut und ausführt
     with: # Parameter kommen hinzu
-     MY_NAME: Julia
+     MY_NAME: ${{ secrets.SECRET_NAME }}
    
