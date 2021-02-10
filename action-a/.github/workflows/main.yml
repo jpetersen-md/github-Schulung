@@ -1,0 +1,14 @@
+name: Basic-Schulung
+on: 
+  push:
+  workflow_dispatch: # manueller Trigger
+jobs:
+  build:
+  name: My first Action 
+  runs-on: ubuntu-latest # wir nehemen runner von github #self-hosted falls in der Organization
+  steps: 
+   -uses: actions/checkout@v1 # das sind Repos die versch. Funktionen ausführen/ versch.tools haben, die wir einsetzen können; wie ein docker image; 
+   -uses: ./action-a # ordner mit der Action, die das image baut und ausführt
+    with: # Parameter kommen hinzu
+     MY_NAME: Julia
+   
